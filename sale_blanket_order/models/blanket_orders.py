@@ -580,10 +580,7 @@ class BlanketOrderLine(models.Model):
             currency=self.currency_id,
         )
 
-        if self.order_id.pricelist_id.discount_policy == "with_discount":
-            return pricelist_price
-
-        if not self.pricelist_item_id:
+        if not self.pricelist_item_id._show_discount():
             # No pricelist rule found => no discount from pricelist
             return pricelist_price
 
@@ -599,7 +596,7 @@ class BlanketOrderLine(models.Model):
 
         return self.pricelist_item_id._compute_price_before_discount(
             product=self.product_id,
-            quantity=self.product_uom_qty or 1.0,
+            quantity=self.original_uom_qty or 1.0,
             uom=self.product_uom,
             date=fields.Date.today(),
             currency=self.currency_id,

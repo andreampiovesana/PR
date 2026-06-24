@@ -195,8 +195,7 @@ class BlanketOrderWizard(models.TransientModel):
         return {
             "domain": [("id", "in", res)],
             "name": _("Sales Orders"),
-            "view_type": "form",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "res_model": "sale.order",
             "context": {"from_sale_order": True},
             "type": "ir.actions.act_window",
