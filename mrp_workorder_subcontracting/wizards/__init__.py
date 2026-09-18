@@ -1,2 +1,0 @@
-from . import mrp_workorder_assign_subcontract
-from . import purchase_order_subcontract_bid_confirm
