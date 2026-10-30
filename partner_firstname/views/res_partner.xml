@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_simple_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@id='contact']" position="attributes">
+                <attribute name="readonly">not is_company</attribute>
+                <attribute name="required">type == 'contact' and is_company</attribute>
+            </xpath>
+            <xpath expr="//field[@id='contact']/.." position="after">
+                <field name="is_company" invisible="1" />
+                <group invisible="is_company">
+                    <field
+                        invisible="not form_has_lastname_first"
+                        name="lastname"
+                        required="form_has_lastname_first and lastname_required"
+                    />
+                    <field name="firstname" required="firstname_required" />
+                    <field
+                        invisible="form_has_lastname_first"
+                        name="lastname"
+                        required="not form_has_lastname_first and lastname_required"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//h1/field[@name='name']" position="attributes">
+                <attribute name="readonly">not is_company</attribute>
+                <attribute name="required">type == 'contact' and is_company</attribute>
+            </xpath>
+            <xpath expr="//sheet//h1/field[@name='name']/.." position="after">
+                <group invisible="is_company" class="oe_edit_only">
+                    <field
+                        invisible="not form_has_lastname_first"
+                        name="lastname"
+                        required="form_has_lastname_first and lastname_required"
+                    />
+                    <field name="firstname" required="firstname_required" />
+                    <field
+                        invisible="form_has_lastname_first"
+                        name="lastname"
+                        required="not form_has_lastname_first and lastname_required"
+                    />
+                </group>
+            </xpath>
+            <xpath
+                expr="//field[@name='child_ids']/form//field[@name='name']"
+                position="attributes"
+            >
+                <attribute name="readonly">not is_company</attribute>
+                <attribute name="required">is_company</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='child_ids']/form//field[@name='name']/.."
+                position="after"
+            >
+                <field name="is_company" invisible="True" />
+                <group invisible="is_company">
+                    <field
+                        invisible="not form_has_lastname_first"
+                        name="lastname"
+                        required="form_has_lastname_first and lastname_required"
+                    />
+                    <field name="firstname" required="firstname_required" />
+                    <field
+                        invisible="form_has_lastname_first"
+                        name="lastname"
+                        required="not form_has_lastname_first and lastname_required"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

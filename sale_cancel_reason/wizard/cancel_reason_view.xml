@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_sale_order_cancel" model="ir.ui.view">
+        <field name="name">Reason for the cancellation</field>
+        <field name="model">sale.order.cancel</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Sales Order">
+                <p>
+                    Choose the reason for the cancellation of the sale order.
+                </p>
+                <group>
+                    <field name="order_id" invisible="1" />
+                    <field
+                        name="reason_id"
+                        options="{'no_create': True, 'no_open': True}"
+                    />
+                </group>
+                <footer>
+                    <button
+                        name="action_cancel"
+                        type="object"
+                        string="Confirm"
+                        class="btn-primary"
+                    />
+                    <button string="Discard" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

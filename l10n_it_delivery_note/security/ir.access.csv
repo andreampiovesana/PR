@@ -1,0 +1,31 @@
+id,name,model_id,group_id/id,operation,domain
+access_stock_delivery_note_type,access_stock_delivery_note_type,stock.delivery.note.type,base.group_user,r,
+access_stock_delivery_note_type_manager,access_stock_delivery_note_type manager,stock.delivery.note.type,stock.group_stock_manager,crud,
+stock_delivery_note_type_company_rule,Delivery note type multi-company,stock.delivery.note.type,,crud,"
+            ['|',('company_id','=',False),('company_id','in',company_ids)]
+        "
+access_stock_picking_goods_appearance,access_stock_picking_goods_appearance,stock.picking.goods.appearance,base.group_user,r,
+access_stock_picking_goods_appearance_manager,stock.picking.goods.appearance manager,stock.picking.goods.appearance,stock.group_stock_manager,crud,
+access_stock_picking_transport_condition,access_stock_picking_transport_condition,stock.picking.transport.condition,base.group_user,r,
+access_stock_picking_transport_condition_manager,stock.picking.transport.condition manager,stock.picking.transport.condition,stock.group_stock_manager,crud,
+access_stock_picking_transport_method,access_stock_picking_transport_method,stock.picking.transport.method,base.group_user,r,
+access_stock_picking_transport_method_manager,stock.picking.transport.method manager,stock.picking.transport.method,stock.group_stock_manager,crud,
+access_stock_picking_transport_reason,access_stock_picking_transport_reason,stock.picking.transport.reason,base.group_user,r,
+access_stock_picking_transport_reason_manager,stock.picking.transport.reason manager,stock.picking.transport.reason,stock.group_stock_manager,crud,
+access_stock_delivery_note_user,access_stock_delivery_note user,stock.delivery.note,stock.group_stock_user,crud,
+stock_delivery_note_personal_rule,Personal Delivery note,stock.delivery.note,base.group_portal,r,"
+        ['|','|',('partner_id','=',user.partner_id.id),('partner_id','=',user.partner_id.parent_id.id),'|',('partner_shipping_id','=',user.partner_id.id),('partner_shipping_id','=',user.partner_id.parent_id.id)]
+        "
+stock_delivery_note_company_rule,Delivery note multi-company,stock.delivery.note,,crud,"
+            ['|',('company_id','=',False),('company_id','in',company_ids)]
+        "
+access_stock_delivery_note_line_user,access_stock_delivery_note_line user,stock.delivery.note.line,stock.group_stock_user,crud,
+stock_delivery_note_line_personal_rule,Personal Delivery note line,stock.delivery.note.line,base.group_portal,r,"
+        ['|','|',('delivery_note_id.partner_id','=',user.partner_id.id),('delivery_note_id.partner_id','=',user.partner_id.parent_id.id),'|',('delivery_note_id.partner_shipping_id','=',user.partner_id.id),('delivery_note_id.partner_shipping_id','=',user.partner_id.parent_id.id)]
+        "
+access_stock_delivery_note_confirm_wizard_manager,access_stock_delivery_note_confirm_wizard manager,stock.delivery.note.confirm.wizard,base.group_user,crud,
+access_stock_delivery_note_create_wizard_manager,access_stock_delivery_note_create_wizard manager,stock.delivery.note.create.wizard,base.group_user,crud,
+access_stock_delivery_note_select_wizard_manager,access_stock_delivery_note_select_wizard manager,stock.delivery.note.select.wizard,base.group_user,crud,
+access_stock_delivery_note_base_wizard_manager,access_stock_delivery_note_base_wizard manager,stock.delivery.note.base.wizard,base.group_user,crud,
+access_stock_delivery_note_invoice_wizard_manager,access_stock_delivery_note_invoice_wizard manager,stock.delivery.note.invoice.wizard,base.group_user,crud,
+access_delivery_carrier_portal,delivery.carrier portal,delivery.carrier,base.group_portal,r,

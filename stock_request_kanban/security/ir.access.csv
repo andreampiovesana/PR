@@ -1,0 +1,11 @@
+id,name,model_id,group_id/id,operation,domain
+access_stock_request_kanban_user,stock request kanban user,stock.request.kanban,stock_request.group_stock_request_user,cru,
+access_stock_request_kanban_manager,stock request kanban manager,stock.request.kanban,stock_request.group_stock_request_manager,crud,
+access_stock_inventory_kanban_user,stock inventory kanban user,stock.inventory.kanban,stock_request.group_stock_request_user,cru,
+access_stock_inventory_kanban_manager,stock inventory kanban manager,stock.inventory.kanban,stock_request.group_stock_request_manager,crud,
+access_wizard_stock_request_kanban_user,wizard stock request kanban user,wizard.stock.request.kanban,stock_request.group_stock_request_user,cru,
+access_wizard_stock_request_kanban_manager,wizard stock request kanban manager,wizard.stock.request.kanban,stock_request.group_stock_request_manager,crud,
+access_wizard_stock_inventory_kanban_user,wizard stock inventory kanban user,wizard.stock.inventory.kanban,stock_request.group_stock_request_user,cru,
+access_wizard_stock_inventory_kanban_manager,wizard stock inventory kanban manager,wizard.stock.inventory.kanban,stock_request.group_stock_request_manager,crud,
+access_wizard_stock_request_order_kanban_user,wizard stock request order kanban user,wizard.stock.request.order.kanban,stock_request.group_stock_request_user,cru,
+access_wizard_stock_request_order_kanban_manager,wizard stock request order kanban manager,wizard.stock.request.order.kanban,stock_request.group_stock_request_manager,crud,

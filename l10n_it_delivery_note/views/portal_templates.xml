@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="portal_my_home_delivery_note" model="portal.entry">
+        <field name="name">Your Delivery Notes</field>
+        <field name="description">Follow or download your delivery notes</field>
+        <field name="url">/my/delivery-notes</field>
+        <field name="placeholder_count">dn_count</field>
+        <field name="category">client_category</field>
+        <field name="sequence" eval="60" />
+    </record>
+</odoo>
