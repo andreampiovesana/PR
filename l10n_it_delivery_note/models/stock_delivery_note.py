@@ -56,6 +56,9 @@ class StockDeliveryNote(models.Model):
     def _default_company(self):
         return self.env.company
 
+    def _default_sender(self):
+        return self.env.company.partner_id
+
     def _default_type(self):
         return self.env["stock.delivery.note.type"].search(
             [
@@ -102,7 +105,7 @@ class StockDeliveryNote(models.Model):
     partner_sender_id = fields.Many2one(
         "res.partner",
         string="Sender",
-        default=_default_company,
+        default=_default_sender,
         readonly=True,
         required=True,
         tracking=True,
