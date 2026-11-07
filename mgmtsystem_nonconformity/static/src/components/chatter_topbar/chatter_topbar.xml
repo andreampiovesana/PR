@@ -1,0 +1,29 @@
+<templates xml:space="preserve">
+
+    <t
+        t-name="mgmtsystem_nonconformity.ChatterTopbar"
+        t-inherit="mail.Chatter"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//div[hasclass('o-mail-Followers')]" position="before">
+            <button
+                class="o_ChatterTopbar_button o_ChatterTopbar_buttonNonConformities btn btn-link text-action px-1"
+                type="button"
+                t-att-disabled="!this.state.thread.hasWriteAccess and this.thread().id"
+                t-on-click="this.onClickShowNonConformities"
+                t-if="this.state.thread.non_conformity_count !== undefined"
+            >
+                <i
+                    class="oi oi-fw me-1"
+                    data-icon="warning"
+                    role="img"
+                    aria-label="Non conformities"
+                />
+                <sup
+                    class="o_ChatterTopbar_buttonCount o_ChatterTopbar_buttonNonConformitiesCount"
+                    t-out="this.state.thread.non_conformity_count"
+                />
+            </button>
+        </xpath>
+    </t>
+</templates>

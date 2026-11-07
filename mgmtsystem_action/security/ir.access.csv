@@ -1,0 +1,9 @@
+id,name,model_id,group_id/id,operation,domain
+access_mgmtsystem_action_viewer,mgmtsystem.action.user.viewer,mgmtsystem.action,mgmtsystem.group_mgmtsystem_viewer,r,
+access_mgmtsystem_action_user,mgmtsystem.action.user.user,mgmtsystem.action,mgmtsystem.group_mgmtsystem_user,cru,
+mgmtsystem_action_rule,mgmtsystem_action multi-company,mgmtsystem.action,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"
+access_mgmtsystem_action_stage_user,access_mgmtsystem_action_stage_user,mgmtsystem.action.stage,mgmtsystem.group_mgmtsystem_user,r,
+access_mgmtsystem_action_stage_manager,access_mgmtsystem_action_stage_manager,mgmtsystem.action.stage,mgmtsystem.group_mgmtsystem_manager,crud,
+access_mgmtsystem_action_tag_user,access_mgmtsystem_action_tag_user,mgmtsystem.action.tag,mgmtsystem.group_mgmtsystem_user,r,
+access_mgmtsystem_action_tag_manager,access_mgmtsystem_action_tag_manager,mgmtsystem.action.tag,mgmtsystem.group_mgmtsystem_manager,crud,
+access_mgmtsystem_action_report,access_mgmtsystem_action_report,mgmtsystem.action.report,mgmtsystem.group_mgmtsystem_user,r,

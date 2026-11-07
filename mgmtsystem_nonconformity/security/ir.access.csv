@@ -1,0 +1,12 @@
+id,name,model_id,group_id/id,operation,domain
+access_mgmtsystem_nonconformity_user,mgmtsystem.nonconformity.user,mgmtsystem.nonconformity,mgmtsystem.group_mgmtsystem_user,cru,
+access_mgmtsystem_nonconformity_viewer,mgmtsystem.nonconformity.viewer,mgmtsystem.nonconformity,mgmtsystem.group_mgmtsystem_viewer,r,
+mgmtsystem_nonconformity_rule,mgmtsystem_nonconformity multi-company,mgmtsystem.nonconformity,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"
+access_mgmtsystem_nonconformity_origin_viewer,mgmtsystem.nonconformity.origin.viewer,mgmtsystem.nonconformity.origin,mgmtsystem.group_mgmtsystem_viewer,r,
+access_mgmtsystem_nonconformity_origin_manager,mgmtsystem.nonconformity.origin.manager,mgmtsystem.nonconformity.origin,mgmtsystem.group_mgmtsystem_manager,crud,
+access_mgmtsystem_nonconformity_cause_viewer,mgmtsystem.nonconformity.cause.viewer,mgmtsystem.nonconformity.cause,mgmtsystem.group_mgmtsystem_viewer,r,
+access_mgmtsystem_nonconformity_cause_manager,mgmtsystem.nonconformity.cause.manager,mgmtsystem.nonconformity.cause,mgmtsystem.group_mgmtsystem_manager,crud,
+access_mgmtsystem_nonconformity_severity_viewer,mgmtsystem.nonconformity.severity.viewer,mgmtsystem.nonconformity.severity,mgmtsystem.group_mgmtsystem_viewer,r,
+access_mgmtsystem_nonconformity_severity_manager,mgmtsystem.nonconformity.severity.manager,mgmtsystem.nonconformity.severity,mgmtsystem.group_mgmtsystem_manager,crud,
+access_mgmtsystem_nonconformity_stage_viewer,mgmtsystem.nonconformity.stage.viewer,mgmtsystem.nonconformity.stage,mgmtsystem.group_mgmtsystem_viewer,r,
+access_mgmtsystem_nonconformity_stage_manager,mgmtsystem.nonconformity.stage.manager,mgmtsystem.nonconformity.stage,mgmtsystem.group_mgmtsystem_manager,crud,
